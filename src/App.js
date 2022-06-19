@@ -37,7 +37,7 @@ const formatInt=new Intl.NumberFormat("en-IN",{
 })
 
 const formatOperand = (operand)=>{
-  if(operand==null) return;
+  if(operand == null) return ;
   const [int , decimal] = operand.split('.');
   if(decimal == null) return formatInt.format(int);
   return `${formatInt.format(int)}.${decimal}`;
